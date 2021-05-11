@@ -1,9 +1,13 @@
 import React from 'react'
+import {Link} from 'react-router-dom';
 
 function Navbar() {
     return (
         <div>
            <nav className="nav">
+
+         {/*  <Link to='/'>Game List</Link>
+            <Li><StyledLink to='/games/data.id'>Game Details</StyledLink></Li> */}
 
                <div className="nav__link">
                     <i className="material-icons nav__icon">home</i>
