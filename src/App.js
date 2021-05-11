@@ -1,11 +1,11 @@
 import {Switch, Route} from "react-router-dom"
-import { Health } from './components/Health';
-import { Home } from './components/Home';
-import { Message } from './components/Message';
-import { Group } from './components/Group';
-import { Survival } from './components/Survival';
-import { Weather } from './components/Weather';
-import { Entertainment } from './components/Entertainment';
+import { Health } from './components/home/Health';
+import { Home } from './components/home/Home';
+import { Message } from './components/home/Message';
+import { Group } from './components/home/Group';
+import { Survival } from './components/home/Survival';
+import { Weather } from './components/home/Weather';
+import { Entertainment } from './components/home/Entertainment';
 import React from 'react';
 import Navbar from "./components/Navbar";
 
