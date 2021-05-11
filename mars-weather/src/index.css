@@ -11,6 +11,7 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+/* Weather */
 html {
   background: url("https://cdn.pixabay.com/photo/2012/01/09/10/17/mars-11604_960_720.jpg")
     no-repeat center center fixed;

@@ -19,7 +19,7 @@ const WeatherData = (props) => {
   return (
     <div className="content">
       <div className="mainInfo">
-        <h3>Sol: </h3>
+        <h3>Sol:{} </h3>
         <h5>
           <em>Earth Date:</em>
         </h5>
