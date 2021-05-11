@@ -1,6 +1,7 @@
 import React from "react";
 import "./index.css";
 import WeatherData from "./WeatherData";
+import  Survival from "./Survival";
 
 export default function App() {
   return (
@@ -13,6 +14,7 @@ export default function App() {
       <h2>Weather Location: MARS</h2>
 
       <WeatherData />
+      <Survival />
     </div>
   );
 }
