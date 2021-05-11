@@ -4,7 +4,8 @@ import { ThemeProvider } from "styled-components";
 
 const theme = {
     colors : {
-        blue : "#0B3D91",
+        blue : "#15418C",
+        hover: "#061435",
         red : "#FC3D21",
         white:"#FFFFFF",
         button: "#2991cc",

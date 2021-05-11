@@ -3,19 +3,54 @@ import {Link} from 'react-router-dom';
 import styled from 'styled-components'
 
 const Nav = styled.div`
-background-color:#060B26;
-height:100px;
-color:white;
+position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 15vh;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+  background-color: ${props=>props.theme.colors.hover};
+  display: flex;
+  overflow-x: auto;
+
+  
+`
+
+const StyledDiv = styled.div`
+display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+  min-width: 50px;
+  overflow: hidden;
+  white-space: nowrap;
+  font-size: 18px;
+  -webkit-tap-highlight-color: transparent;
+  transition: background-color 0.1s ease-in-out, transform .2s;
+     &:hover{
+          background-color: ${props=>props.theme.colors.blue};
+          transform: scale(1.15);
+        
+    }
+`
+
+
+const StyledSpan = styled.span`
+padding-top:5px;
+
 `
 
 const StyledLink = styled(Link)`
 display:flex;
+padding-top:5px;
 flex-direction:column;
 justify-content:center;
 align-items:center;
+color:${props=>props.theme.colors.white};
     text-decoration: none;
     &:focus, &:hover, &:visited, &:link, &:active {
         text-decoration: none;
+        
     }
 `;
 
@@ -23,43 +58,44 @@ function Navbar() {
     return (
           <div>
                
-               <nav className="nav">
+               <Nav>
 
-               <div className="nav__link">
+               <StyledDiv >
                     <StyledLink  to='/'><i className="material-icons nav__icon">home</i>
-                         <span className="nav__text">Home</span>
+                         <StyledSpan >Home</StyledSpan>
                     </StyledLink >
-               </div>
+               </StyledDiv>
 
-               <div className="nav__link nav__link--active">
+               <StyledDiv>
                     <StyledLink  to='/health'>
                          <i class="material-icons nav__icon">emoji_emotions</i>
-                         <span class="nav__text">Mood</span>
+                         <StyledSpan >Mood</StyledSpan>
                     </StyledLink >
-               </div>
+               </StyledDiv>
 
-               <div className="nav__link nav__link--active">
+               <StyledDiv>
                     <StyledLink  to='/Survival'>
                          <i class="material-icons nav__icon">feedback</i>
-                         <span class="nav__text">Survival kit</span>
+                         <StyledSpan >Survival kit</StyledSpan>
                     </StyledLink>
-               </div>
+               </StyledDiv>
 
-               <div className="nav__link nav__link--active">
+               <StyledDiv>
                     <StyledLink  to='/group'>
-
                          <i class="material-icons nav__icon">people</i>
-                         <span class="nav__text">Groups</span>
+                         <StyledSpan >Groups</StyledSpan>
                     </StyledLink>
-               </div>
+               </StyledDiv>
 
-               <div className="nav__link nav__link--active">
-                    <i class="material-icons nav__icon">lock</i>
-                    <span class="nav__text">Privacy</span>
-               </div>
+               <StyledDiv>
+                    <StyledLink  to='/'>
+                         <i class="material-icons nav__icon">lock</i>
+                         <StyledSpan>Privacy</StyledSpan>
+                    </StyledLink>
+               </StyledDiv>
 
                
-               </nav> 
+               </Nav> 
           </div>
         )
 }
