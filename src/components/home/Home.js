@@ -6,11 +6,39 @@ import { Survival } from './Survival';
 import { Weather } from './Weather';
 import { Entertainment } from './Entertainment';
 import { DailyImage } from './DailyImage';
-import styled from 'styled-components';
+import styled, {css} from 'styled-components';
 
 const AppContiner=styled.div`
 margin:20px;
 
+`
+const sharedStyles = css`
+
+    display:flex;
+    width:22%;
+  height: auto;
+  padding-bottom:20px; 
+  margin:10px;
+  box-shadow: ${props=>props.theme.boxShadow};
+  text-align: center;
+  border-radius: 11px; 
+  height:22vh;
+
+  flex-direction:column;
+  align-items:center;
+  justify-content:space-between;
+  padding:15px;
+
+
+
+
+  transition:  transform .2s;
+     &:hover{
+        
+          transform: scale(1.15);
+        
+    }
+    
 `
 
 const BoxesContainer = styled.div`
@@ -34,28 +62,36 @@ const BoxWrapper = styled.div`
 `
 
 const BoxDisplayer = styled.div`
-  width:22%;
-  height: auto;
-  padding-bottom:20px; 
-  margin:10px;
-  box-shadow: ${props=>props.theme.boxShadow};
-  text-align: center;
-  border-radius: 11px; 
-  height:22vh;
+  ${sharedStyles}
+    
+`
+const StyledHappyDiv = styled.div`
+  ${sharedStyles}
+  background-color:${props=>props.theme.colors.green};
+  
+  
+    
+`
+const StyledSadDiv = styled.div`
+  ${sharedStyles}
+  background-color:${props=>props.theme.colors.red};
     
 `
 
 export const Home = () => {
 
 
-    let[mood, setMood]=useState(false)
+    let[isHappy, setIsHappy]=useState(true)
+    let[mood, setMood]=useState("") 
 
     const changeMood=()=>{
-        if (mood){
-            setMood(false)
+        if (isHappy){
+            setMood("You feel sad")
+            setIsHappy(false)
             
          }else{
-            setMood(true)
+            setMood("You are happy")
+            setIsHappy(true)
          }
     }
     return (
@@ -74,9 +110,23 @@ export const Home = () => {
                 </BoxDisplayer>
             </BoxesContainer>
             <BoxesContainer>
-                <BoxDisplayer>
-                    <Health  mood={mood} setMood={setMood} changeMood={changeMood}/>
-                </BoxDisplayer>
+
+                {
+                mood===""
+                ?<BoxDisplayer>
+                <Health mood={mood} isHappy={isHappy} changeMood={changeMood}/>
+                
+                </BoxDisplayer>:
+                isHappy ?
+                <StyledHappyDiv>
+                    <Health mood={mood} isHappy={isHappy} changeMood={changeMood}/>
+                    
+                </StyledHappyDiv>:
+                <StyledSadDiv>
+                    <Health mood={mood} isHappy={isHappy} changeMood={changeMood}/>
+                </StyledSadDiv>
+                }
+                
                 <BoxDisplayer>
                     <Survival/>
                 </BoxDisplayer>

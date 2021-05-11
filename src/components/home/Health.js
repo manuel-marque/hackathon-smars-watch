@@ -1,31 +1,51 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled  from 'styled-components';
+import InsertEmoticonIcon from '@material-ui/icons/InsertEmoticon';
+import SentimentVeryDissatisfiedIcon from '@material-ui/icons/SentimentVeryDissatisfied';
+import SentimentSatisfiedIcon from '@material-ui/icons/SentimentSatisfied';
 
-const StyledDivHappy =styled.div`
-background-color:${props=>props.theme.colors.green};
-
+const Button = styled.button`
+    display:block;
+    background-color:${props=>props.theme.colors.buttonHover};
+   /*  font-size: .9rem; */
+    /* width:25%;
+    height:40px; */
+    color: ${props=>props.theme.colors.white};
+   /*  text-transform:uppercase; */
+    font-weight:bold;
+    border:1px solid #000;
+    border-radius: 5px;
+    /* margin-top:10px; */
+    padding: 5px 20px;
+    box-sizing: border-box;
+    transition: background-color .3s ease;
+   
+    &:hover{
+        background-color:${props=>props.theme.colors.button};
+        cursor:pointer;
+    }
 `
 
-const StyledDivSad =styled.div`
-background-color:${props=>props.theme.colors.red};
 
-`
 
-export const Health = ({mood, changeMood}) => {
+export const Health = ({ changeMood, mood,isHappy}) => {
     return (
         <>
-            {mood ?
-                <StyledDivHappy>
-                    <h1>Your Mood</h1>
+        
+                
+            <h1>{mood===""? "How do you feel today?":  mood}</h1>  
+            <span>{mood===""? <SentimentSatisfiedIcon/>:  isHappy?
+                <InsertEmoticonIcon/>:  <SentimentVeryDissatisfiedIcon/>}</span>
+                
+            
+           {/*  {isHappy?
+                <span><InsertEmoticonIcon/></span>:  <span><SentimentVeryDissatisfiedIcon/></span>
 
-                    <button onClick={changeMood}>How do you feel today?</button>
-                </StyledDivHappy>:
-                <StyledDivSad>
-                <h1>Your Mood</h1>
-
-                <button onClick={changeMood}>How do you feel today?</button>
-                </StyledDivSad>
             }
+             */}
+            <Button onClick={changeMood}>Select your today's Mood</Button>
+                
+            
         </>
     )
 }
