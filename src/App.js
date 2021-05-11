@@ -1,19 +1,18 @@
-import './App.css';
 import {Switch, Route} from "react-router-dom"
 import { Health } from './components/Health';
 import { Home } from './components/Home';
 import { Message } from './components/Message';
 import { Group } from './components/Group';
 import { Survival } from './components/Survival';
-import { Weather } from './components/Survival';
-import { React, Fragment } from "react";
+import { Weather } from './components/Weather';
+import { Entertainment } from './components/Entertainment';
+import React from 'react';
 import Navbar from "./components/Navbar";
-
 
 function App() {
   return (
     <div>
-       <Navbar/>
+      <Navbar/>
       <Switch>
         
         <Route
@@ -30,7 +29,7 @@ function App() {
         <Route
           path="/entertainment" 
           render={props =>
-            <Entertainment  
+            <Entertainment
           
             {...props} />
           }
