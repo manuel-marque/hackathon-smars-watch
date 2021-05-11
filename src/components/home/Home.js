@@ -85,9 +85,7 @@ export const Home = () => {
                     <Entertainment/>
                 </BoxDisplayer>
             
-                <BoxDisplayer>
-                    <Group/>
-                </BoxDisplayer>
+                
                 
             </BoxesContainer>
 
