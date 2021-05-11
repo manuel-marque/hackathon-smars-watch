@@ -6,6 +6,7 @@ const theme = {
     colors : {
         blue : "#15418C",
         hover: "#061435",
+        green:"#31EB34",
         red : "#FC3D21",
         white:"#FFFFFF",
         button: "#2991cc",
