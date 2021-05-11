@@ -23,25 +23,62 @@ margin-bottom:10px;
 height:auto;
 `
 
+const BoxWrapper = styled.div`
+  display: flex;
+  flex-direction:row;
+  justify-content: space-around;
+  margin: 5%; 
+  width:100%;
+  height:auto;
+    
+`
+
+const BoxDisplayer = styled.div`
+  width:22%;
+  height: auto;
+  padding-bottom:20px; 
+  margin:10px;
+  box-shadow: ${props=>props.theme.boxShadow};
+  text-align: center;
+  border-radius: 11px; 
+  height:22vh;
+    
+`
+
 export const Home = () => {
     return (
         <AppContiner>
             <BoxesContainer>
-                {/* <Message/> */}
+                <BoxDisplayer>
+                    <Message/>
+                </BoxDisplayer>
             </BoxesContainer>
             <BoxesContainer>
-                {/* <DailyImage/>
-                <Weather/> */}
+                <BoxDisplayer>
+                    <DailyImage/>
+                </BoxDisplayer>
+                <BoxDisplayer>  
+                    <Weather/>
+                </BoxDisplayer>
             </BoxesContainer>
             <BoxesContainer>
-               {/*  <Health/>
-                <Survival/>
-                <Entertainment/>
-                <Group/> */}
-            </BoxesContainer>
-
-
+                <BoxDisplayer>
+                    <Health/>
+                </BoxDisplayer>
+                <BoxDisplayer>
+                    <Survival/>
+                </BoxDisplayer>
+                
+                <BoxDisplayer>
+                    <Entertainment/>
+                </BoxDisplayer>
             
+                <BoxDisplayer>
+                    <Group/>
+                </BoxDisplayer>
+                
+            </BoxesContainer>
+
             
         </AppContiner>
     )
