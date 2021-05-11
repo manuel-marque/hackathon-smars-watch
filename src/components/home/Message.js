@@ -3,7 +3,7 @@ import React from 'react'
 export const Message = () => {
     return (
         <div>
-            <h1>Message</h1>
+            <h1>Today's Mission</h1>
             
         </div>
     )

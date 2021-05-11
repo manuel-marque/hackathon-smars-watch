@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { Health } from './Health';
 import { Message } from './Message';
 import { Group } from './Group';
@@ -46,6 +46,18 @@ const BoxDisplayer = styled.div`
 `
 
 export const Home = () => {
+
+
+    let[mood, setMood]=useState(false)
+
+    const changeMood=()=>{
+        if (mood){
+            setMood(false)
+            
+         }else{
+            setMood(true)
+         }
+    }
     return (
         <AppContiner>
             <BoxesContainer>
@@ -63,7 +75,7 @@ export const Home = () => {
             </BoxesContainer>
             <BoxesContainer>
                 <BoxDisplayer>
-                    <Health/>
+                    <Health  mood={mood} setMood={setMood} changeMood={changeMood}/>
                 </BoxDisplayer>
                 <BoxDisplayer>
                     <Survival/>
