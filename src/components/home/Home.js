@@ -2,8 +2,8 @@ import React, {useState} from 'react';
 import { Health } from './Health';
 import { Message } from './Message';
 import { Group } from './Group';
-import { Survival } from './Survival';
-import { Weather } from './Weather';
+import Survival  from './Survival';
+import Weather  from './Weather';
 import { Entertainment } from './Entertainment';
 import { DailyImage } from './DailyImage';
 import styled, {css} from 'styled-components';
@@ -70,6 +70,12 @@ const BoxDisplayer = styled.div`
   ${sharedStyles}
     
 `
+
+const ScrollBox = styled.div`
+  ${sharedStyles}
+  overflow: scroll;
+    
+`
 const StyledHappyDiv = styled.div`
   ${sharedStyles}
   background-color:${props=>props.theme.colors.green};
@@ -110,9 +116,9 @@ export const Home = () => {
                 <BoxImageDisplayer>
                     <DailyImage/>
                 </BoxImageDisplayer>
-                <BoxDisplayer>  
+                <ScrollBox>  
                     <Weather/>
-                </BoxDisplayer>
+                </ScrollBox>
             </BoxesContainer>
             <BoxesContainer>
 
@@ -132,9 +138,9 @@ export const Home = () => {
                 </StyledSadDiv>
                 }
                 
-                <BoxDisplayer>
+                <ScrollBox>
                     <Survival/>
-                </BoxDisplayer>
+                </ScrollBox>
                 
                 <BoxDisplayer>
                     <Entertainment isHappy={isHappy}/>
