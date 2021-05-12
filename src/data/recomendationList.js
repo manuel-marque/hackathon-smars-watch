@@ -34,7 +34,7 @@ export const recomendationList=[
         "action":"listen",
         "genre":"classical",
         "mood":"sad",
-        "Author": "Bethoven",
+        "Author": "Beethoven",
         "img":"https://canalhistoria.es/wp-content/uploads/2018/03/beethoven.jpg"
     },
     {

@@ -25,7 +25,7 @@ export const Entertainment = ({isHappy}) => {
 
     /* let findRandomActivity= recomendationList.find(recomendation=>recomendation.id == randomNumber) */
     useEffect(() => {
-        setActivity(recomendationList.find(recomendation=>recomendation.id == randomNumber))
+        setActivity(recomendationList.find(recomendation=>recomendation.id === randomNumber))
      }, [])
     
 
