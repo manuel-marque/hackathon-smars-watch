@@ -6,7 +6,7 @@ const Nav = styled.div`
 position: fixed;
   bottom: 0;
   width: 100%;
-  height: 15vh;
+  height: 10vh;
   box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
   background-color: ${props=>props.theme.colors.hover};
   display: flex;
