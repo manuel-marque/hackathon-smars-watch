@@ -42,7 +42,7 @@ padding-top:5px;
 
 const StyledLink = styled(Link)`
 display:flex;
-padding-top:5px;
+padding-top:10px;
 flex-direction:column;
 justify-content:center;
 align-items:center;
@@ -80,19 +80,12 @@ function Navbar() {
                     </StyledLink>
                </StyledDiv>
 
-               <StyledDiv>
+               {/* <StyledDiv>
                     <StyledLink  to='/group'>
                          <i class="material-icons nav__icon">people</i>
                          <StyledSpan >Groups</StyledSpan>
                     </StyledLink>
-               </StyledDiv>
-
-               <StyledDiv>
-                    <StyledLink  to='/'>
-                         <i class="material-icons nav__icon">lock</i>
-                         <StyledSpan>Privacy</StyledSpan>
-                    </StyledLink>
-               </StyledDiv>
+               </StyledDiv> */}
 
                
                </Nav> 
