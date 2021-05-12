@@ -8,7 +8,6 @@ import { Entertainment } from './Entertainment';
 import { DailyImage } from './DailyImage';
 import styled, {css} from 'styled-components';
 
-
 const AppContiner=styled.div`
 margin:20px;
 
@@ -141,9 +140,7 @@ export const Home = () => {
                     <Entertainment isHappy={isHappy}/>
                 </BoxDisplayer>
             
-                <BoxDisplayer>
-                    <Group/>
-                </BoxDisplayer>
+                
                 
             </BoxesContainer>
 

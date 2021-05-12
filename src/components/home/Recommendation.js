@@ -2,16 +2,12 @@ import React, {useState} from 'react';
 import styled from 'styled-components';
 
 const StyledDiv = styled.div`
-
-
   
 `
 
 const StyledP = styled.p`
 font-size:1em;
 padding-top:10px;
-
-
   
 `
 

@@ -7,7 +7,6 @@ import {getRandomId} from "../../helper/function"
 const StyledDiv=styled.div`
 width:100%;
 height:100%;
-
 `
 const Img=styled.img`
 height: 100%;

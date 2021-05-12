@@ -28,7 +28,6 @@ const Button = styled.button`
 
 
 
-
 export const Health = ({ changeMood, mood,isHappy}) => {
     return (
         <>
