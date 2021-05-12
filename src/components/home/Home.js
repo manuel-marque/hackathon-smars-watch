@@ -140,9 +140,7 @@ export const Home = () => {
                     <Entertainment isHappy={isHappy}/>
                 </BoxDisplayer>
             
-                <BoxDisplayer>
-                    <Group/>
-                </BoxDisplayer>
+                
                 
             </BoxesContainer>
 
