@@ -8,6 +8,7 @@ import { Entertainment } from './Entertainment';
 import { DailyImage } from './DailyImage';
 import styled, {css} from 'styled-components';
 
+
 const AppContiner=styled.div`
 margin:20px;
 
@@ -23,7 +24,6 @@ const sharedStyles = css`
   text-align: center;
   border-radius: 11px; 
   height:22vh;
-
   flex-direction:column;
   align-items:center;
   justify-content:space-between;
@@ -58,6 +58,12 @@ const BoxWrapper = styled.div`
   margin: 5%; 
   width:100%;
   height:auto;
+    
+`
+const BoxImageDisplayer = styled.div`
+  ${sharedStyles}
+  padding:0px;
+  margin-bottom:30px;
     
 `
 
@@ -102,9 +108,9 @@ export const Home = () => {
                 </BoxDisplayer>
             </BoxesContainer>
             <BoxesContainer>
-                <BoxDisplayer>
+                <BoxImageDisplayer>
                     <DailyImage/>
-                </BoxDisplayer>
+                </BoxImageDisplayer>
                 <BoxDisplayer>  
                     <Weather/>
                 </BoxDisplayer>
@@ -132,7 +138,7 @@ export const Home = () => {
                 </BoxDisplayer>
                 
                 <BoxDisplayer>
-                    <Entertainment/>
+                    <Entertainment isHappy={isHappy}/>
                 </BoxDisplayer>
             
                 <BoxDisplayer>

@@ -28,6 +28,7 @@ const Button = styled.button`
 
 
 
+
 export const Health = ({ changeMood, mood,isHappy}) => {
     return (
         <>
@@ -38,11 +39,7 @@ export const Health = ({ changeMood, mood,isHappy}) => {
                 <InsertEmoticonIcon/>:  <SentimentVeryDissatisfiedIcon/>}</span>
                 
             
-           {/*  {isHappy?
-                <span><InsertEmoticonIcon/></span>:  <span><SentimentVeryDissatisfiedIcon/></span>
-
-            }
-             */}
+        
             <Button onClick={changeMood}>Select your today's Mood</Button>
                 
             

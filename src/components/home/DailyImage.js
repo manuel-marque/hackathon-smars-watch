@@ -1,12 +1,23 @@
 import React from 'react'
 import pictureDay from '../../img/car-media.jpg'
-import './dailyImage.css'
+import styled from 'styled-components';
+
+const StyledDiv=styled.div`
+width:100%;
+height:100%;
+
+`
+const Img=styled.img`
+height: 100%;
+    width: 100%;
+    object-fit: cover;
+`
 
 export const DailyImage = () => {
     return (
-        <div>
+        <StyledDiv>
             <h3>Image Of the Day</h3>
-            <img src={pictureDay} alt="photoDay" className="photos"></img>
-        </div>
+            <Img src={pictureDay} alt="photoDay" ></Img> 
+        </StyledDiv>
     )
 }
