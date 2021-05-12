@@ -32,12 +32,13 @@ export const Entertainment = ({isHappy}) => {
     let [isHovered, setIsHovered ]= useState(false)
     return (
         <StyledDiv onMouseEnter={() => setIsHovered(true)}
+        /*a  */
         onMouseLeave={() => setIsHovered(false)}>
             {isHovered? <Img src={activity.img}></Img>: <Recommendation activity={activity}/>}
             
             
             
-            
+        
         </StyledDiv>
     )
 }
