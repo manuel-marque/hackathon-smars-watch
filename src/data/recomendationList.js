@@ -29,7 +29,7 @@ export const recomendationList=[
     },
     {
         "id":3,
-        "title": "The Lord of the rings",
+        "title": "symphony 5",
         "type":"music",
         "action":"listen",
         "genre":"classical",

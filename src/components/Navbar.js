@@ -80,12 +80,12 @@ function Navbar() {
                     </StyledLink>
                </StyledDiv>
 
-               {/* <StyledDiv>
+               <StyledDiv>
                     <StyledLink  to='/group'>
                          <i class="material-icons nav__icon">people</i>
                          <StyledSpan >Groups</StyledSpan>
                     </StyledLink>
-               </StyledDiv> */}
+               </StyledDiv> 
 
                
                </Nav> 
