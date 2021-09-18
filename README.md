@@ -1,3 +1,8 @@
+ We took part in Hackathon. We have to create an applicatopn in 24hrs for an alone aastronaut who left alone at Mars. We came up an idea to create a smart watch which helps him to survive in harsh envoirment of mars and help him contact other aliens or planet. It was a great experiance working underpressure.
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
